@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+*.zip
+DRfypvideo.mp4

@@ -1,0 +1,95 @@
+/* Glass panel colours */
+:root {
+  --glass: #11172591;
+  --line: #a8bce633;
+  --muted: #d0d6e2;
+}
+
+html[data-theme=light] {
+  --glass: #b9c5d396;
+  --muted: #263447;
+}
+
+/*
+  Wallpaper transparency only.
+  Lower opacity makes the wallpaper fainter:
+  0.15 = very faint
+  0.30 = subtle
+  0.50 = more visible
+*/
+#cinema {
+  opacity: 0.10;
+}
+
+/* Remove extra wallpaper tint */
+#cinema:after,
+html[data-theme=light] #cinema:after {
+  background: none;
+}
+
+/* Header */
+header {
+  background: #111725a8;
+}
+
+html[data-theme=light] header {
+  background: #b9c5d3ae;
+}
+
+/* Glass panels */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    inset 0 1px 0 #e6eaff20,
+    0 14px 40px #0003;
+}
+
+/* Project cards */
+.project {
+  background: linear-gradient(
+    135deg,
+    #161a2a91,
+    #15203a66
+  );
+}
+
+html[data-theme=light] .project {
+  background: var(--glass);
+}
+
+/* Business logo panel */
+.business-logo {
+  background: linear-gradient(
+    135deg,
+    #2c374b55,
+    #33214433
+  );
+}
+
+/* Subtle fluid effects */
+#fluid {
+  opacity: 0.22;
+}
+
+/* Readable introduction text */
+.hero .intro {
+  text-shadow: 0 2px 12px #000b;
+}
+
+/* Navigation and chatbot */
+#assistant,
+nav {
+  background: color-mix(
+    in srgb,
+    var(--bg) 91%,
+    transparent
+  );
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .glass {
+    backdrop-filter: blur(8px);
+  }
+}
